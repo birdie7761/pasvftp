@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"io"
 	"net"
+	"pasvftp/utils"
 	"time"
-
-	"github.com/molizz/pasvftp/utils"
 )
 
 const (
@@ -32,7 +31,7 @@ func NewPasvServer(originPasvAddr string) *PasvServer {
 		panic(err)
 	}
 
-	ip, _ := utils.PublicIp()
+	ip, _ := utils.GetLocalIP()
 	p := &PasvServer{
 		originPasvHost: originPasvHost,
 		originPasvPort: originPasvPort,
