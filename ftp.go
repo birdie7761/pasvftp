@@ -1,13 +1,18 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-	"github.com/molizz/pasvftp/ftp"
+	"pasvftp/ftp"
+	// "github.com/molizz/pasvftp/ftp"
 )
 
 func main() {
 	fmt.Println("pasvftp by moli")
+	var remoteHost string
+	flag.StringVar(&remoteHost, "h", "remoteHost", "remoteHost")
+	flag.Parse()
 
-	p := ftp.NewFtpProxy(2121, "ftp.helloworld.com", 21)
+	p := ftp.NewFtpProxy(2121, remoteHost, 21)
 	_ = p.Start()
 }
