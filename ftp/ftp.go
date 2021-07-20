@@ -4,7 +4,6 @@ import (
 	"net"
 	"pasvftp/utils"
 	"time"
-	// "github.com/molizz/pasvftp/utils"
 )
 
 type FtpProxy struct {

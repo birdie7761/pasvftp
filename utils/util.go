@@ -15,14 +15,6 @@ func JoinHostPort(host string, port uint) string {
 
 var publicIp string
 
-// func init() {
-// 	var err error
-// 	publicIp, err = PublicIp()
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// }
-
 func GetLocalIP() (ipv4 string, err error) {
 	var (
 		addrs   []net.Addr

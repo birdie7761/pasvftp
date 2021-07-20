@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"pasvftp/ftp"
-	// "github.com/molizz/pasvftp/ftp"
 )
 
 func main() {
